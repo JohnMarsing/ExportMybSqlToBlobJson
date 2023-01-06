@@ -1,0 +1,7 @@
+{
+	"name": "SQLServerToBlobPipeline",
+	"properties": {
+		"description": "copy WordHtml to json files in blog",
+		"annotations": []
+	}
+}
