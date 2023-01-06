@@ -22,11 +22,35 @@
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
+					"sink": {
+						"type": "JsonSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings",
+							"blockSizeInMB": 5,
+							"metadata": [
+								{
+									"value": ""
+								},
+								{
+									"value": ""
+								}
+							]
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings"
+						}
+					},
 					"enableStaging": false
 				},
 				"inputs": [
 					{
 						"referenceName": "OsisXmlToSqlWordHtml",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "WordHtmlJson",
 						"type": "DatasetReference"
 					}
 				]
