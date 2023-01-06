@@ -1,0 +1,67 @@
+{
+	"name": "OsisXmlToSqlWordHtml",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"ScriptureID": {
+				"type": "int",
+				"defaultValue": 31
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ScriptureID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "WordCount",
+				"type": "tinyint",
+				"precision": 3
+			},
+			{
+				"name": "Strongs",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Hebrew",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KjvWord",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Transliteration",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Morph",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MaqqefFollows",
+				"type": "bit"
+			},
+			{
+				"name": "VerseHtmlID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "KjvBcv",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "WordHtml"
+		}
+	}
+}
