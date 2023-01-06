@@ -2,6 +2,36 @@
 	"name": "SQLServerToBlobPipeline",
 	"properties": {
 		"description": "copy WordHtml to json files in blog",
+		"activities": [
+			{
+				"name": "CopySqlServerToAzureBlobActivity",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "SELECT WordCount, Strongs, Hebrew,  KjvWord, Transliteration, ScriptureID\nFROM WordHtml\nWHERE ScriptureID <= 31\nORDER BY ScriptureID,  WordCount",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "OsisXmlToSqlWordHtml",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
 		"annotations": []
 	}
 }
