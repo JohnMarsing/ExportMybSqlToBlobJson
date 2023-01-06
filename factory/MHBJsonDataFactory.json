@@ -1,0 +1,9 @@
+{
+	"name": "MHBJsonDataFactory",
+	"location": "westus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "cae2be18-c0d7-4933-a9b4-119d8e12f227",
+		"tenantId": "06e853da-f8a3-40c4-933b-e91235567845"
+	}
+}
