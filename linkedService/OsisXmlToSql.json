@@ -1,0 +1,10 @@
+{
+	"name": "OsisXmlToSql",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://OsisXmlToSqlKeyVault.vault.azure.net/"
+		}
+	}
+}
