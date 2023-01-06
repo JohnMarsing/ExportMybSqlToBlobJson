@@ -30,9 +30,6 @@
 							"metadata": [
 								{
 									"value": ""
-								},
-								{
-									"value": ""
 								}
 							]
 						},
@@ -40,7 +37,21 @@
 							"type": "JsonWriteSettings"
 						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"logSettings": {
+						"enableCopyActivityLog": true,
+						"copyActivityLogSettings": {
+							"logLevel": "Warning",
+							"enableReliableLogging": false
+						},
+						"logLocationSettings": {
+							"linkedServiceName": {
+								"referenceName": "Mhb5AzureBlobStorageLinkedService",
+								"type": "LinkedServiceReference"
+							}
+						}
+					},
+					"dataIntegrationUnits": 2
 				},
 				"inputs": [
 					{
